@@ -1,0 +1,44 @@
+
+============================================================
+  MÉTRICAS DEL MODELO YOLOV8 - DETECCIÓN DE CASAS
+============================================================
+
+📊 Información del Modelo
+------------------------------------------------------------
+Nombre:      YOLOv8n - Detección de Casas
+Arquitectura: YOLOv8 Nano
+Ruta:        models/best.pt
+
+📊 Métricas de Desempeño
+------------------------------------------------------------
+mAP@50:      0.9950 (99.50%)
+mAP@50-95:   0.9400 (94.00%)
+Precision:   0.9900 (99.00%)
+Recall:      1.0000 (100.00%)
+
+📊 Resumen de Desempeño
+------------------------------------------------------------
+Estado:      ✅ Excelente
+Descripción: El modelo presenta métricas muy altas en todos los indicadores, mostrando un desempeño excepcional en la detección de casas.
+Precisión:   98.75%
+
+📊 Detalles del Entrenamiento
+------------------------------------------------------------
+Modelo Base:     YOLOv8n (nano)
+Hardware:        GPU T4 en Google Colab
+Épocas:          Variable (depende del entrenamiento)
+Dataset:         Imágenes de casas con anotaciones
+Clases:          1
+Nombres:         house
+
+📊 Configuración de Inferencia
+------------------------------------------------------------
+Confianza Por Defecto: 0.25
+Formatos Soportados:   JPG, JPEG, PNG, BMP, TIFF
+Velocidad:             Fast (YOLOv8n)
+
+============================================================
+Generado: 2026-03-02
+Versión:  1.0
+============================================================
+

@@ -1,0 +1,42 @@
+{
+  "model_metrics": {
+    "name": "YOLOv8n - Detección de Casas",
+    "performance": {
+      "mAP@50": 0.995,
+      "mAP@50-95": 0.94,
+      "precision": 0.99,
+      "recall": 1.00
+    },
+    "training_details": {
+      "model_base": "YOLOv8n (nano)",
+      "hardware": "GPU T4 en Google Colab",
+      "epochs": "Variable (depende del entrenamiento)",
+      "dataset": "Imágenes de casas con anotaciones",
+      "num_classes": 1,
+      "class_names": ["house"]
+    },
+    "model_weights": {
+      "path": "models/best.pt",
+      "architecture": "YOLOv8 Nano"
+    },
+    "metrics_description": {
+      "mAP@50": "Mean Average Precision a IoU threshold de 0.50",
+      "mAP@50-95": "Mean Average Precision promedio entre IoU thresholds de 0.50 a 0.95",
+      "precision": "Proporción de predicciones positivas correctas",
+      "recall": "Proporción de casos positivos reales identificados correctamente"
+    },
+    "performance_summary": {
+      "status": "Excelente",
+      "description": "El modelo presenta métricas muy altas en todos los indicadores, mostrando un desempeño excepcional en la detección de casas.",
+      "accuracy_percentage": 98.75
+    }
+  },
+  "inference_metrics": {
+    "confidence_threshold_default": 0.25,
+    "supported_formats": ["JPG", "JPEG", "PNG", "BMP", "TIFF"],
+    "model_inference_speed": "Fast (YOLOv8n)",
+    "output_format": "YOLO format with bounding boxes"
+  },
+  "generated_at": "2026-03-02",
+  "version": "1.0"
+}
