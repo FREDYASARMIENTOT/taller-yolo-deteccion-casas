@@ -13,8 +13,7 @@ model = YOLO("models/best.pt")
 async def detect(
     file: UploadFile = File(...),
     format: str = Query("image", regex="^(image|json)$")
-):
-    # read uploaded contents
+      # read uploaded contents
     contents = await file.read()
     img = Image.open(io.BytesIO(contents)).convert("RGB")
 
