@@ -1,6 +1,0 @@
-
-train: /content/dataset/train/images
-val: /content/dataset/valid/images
-
-nc: 1
-names: ['house']
