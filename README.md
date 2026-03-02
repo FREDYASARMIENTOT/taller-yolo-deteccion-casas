@@ -343,17 +343,54 @@ listar_archivos("ruta/a/carpeta")
 
 ### Métricas del Modelo Entrenado
 
-- **mAP@50**: 0.995
-- **mAP@50-95**: 0.94
-- **Precision**: 0.99
-- **Recall**: 1.00
+#### Desempeño de Detección
+
+| Métrica | Valor | Porcentaje |
+|---------|-------|-----------|
+| **mAP@50** | 0.995 | 99.50% |
+| **mAP@50-95** | 0.94 | 94.00% |
+| **Precision** | 0.99 | 99.00% |
+| **Recall** | 1.00 | 100.00% |
+
+**Resumen:** ✅ **Excelente** - El modelo presenta métricas muy altas en todos los indicadores, mostrando un desempeño excepcional en la detección de casas. Precisión general: **98.75%**
+
+#### Descripción de Métricas
+
+- **mAP@50**: Mean Average Precision evaluada a IoU threshold de 0.50
+- **mAP@50-95**: Mean Average Precision promedio entre IoU thresholds de 0.50 a 0.95
+- **Precision**: Proporción de predicciones positivas correctas en relación a todas las predicciones
+- **Recall**: Proporción de casos positivos reales identificados correctamente por el modelo
 
 ### Detalles del Entrenamiento
 
-- Modelo base: YOLOv8n (nano)
-- Hardware: GPU T4 en Google Colab
-- Épocas: Variable (depende del entrenamiento)
-- Dataset: Imágenes de casas con anotaciones
+| Parámetro | Valor |
+|-----------|-------|
+| **Modelo Base** | YOLOv8n (nano) |
+| **Hardware** | GPU T4 en Google Colab |
+| **Épocas** | Variable (depende del entrenamiento) |
+| **Dataset** | Imágenes de casas con anotaciones |
+| **Clases** | 1 (house) |
+| **Ruta del Modelo** | `models/best.pt` |
+
+### Configuración de Inferencia
+
+- **Confianza por Defecto**: 0.25
+- **Formatos Soportados**: JPG, JPEG, PNG, BMP, TIFF
+- **Velocidad de Inferencia**: Fast (YOLOv8n)
+- **Formato de Salida**: YOLO format con bounding boxes
+
+### Exportar Métricas
+
+Para generar un reporte detallado de métricas, ejecuta:
+
+```bash
+python metrics_reporter.py
+```
+
+Este comando generará:
+- Reporte formateado en consola
+- Archivo `metrics_report.txt` con todas las métricas
+- Acceso programático a métricas individuales mediante la clase `MetricsReporter`
 
 ---
 
